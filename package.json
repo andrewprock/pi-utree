@@ -1,0 +1,18 @@
+{
+  "name": "pi-utree",
+  "version": "1.0.0",
+  "description": "Conversation tree for pi with the /tree UX: user statements and final assistant responses only, no thinking or tool calls",
+  "license": "MIT",
+  "author": "Andrew Prock <prock@cs.wisc.edu>",
+  "keywords": ["pi-package", "pi", "extension", "session", "tree"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewprock/pi-utree.git"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "pi": {
+    "extensions": ["./extensions"]
+  }
+}
