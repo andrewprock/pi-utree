@@ -25,6 +25,13 @@ It reuses pi's own tree selector, so everything from `/tree` works:
 - `ctrl+x` copy the selected message
 - Filter keys (`ctrl+u` for user-only, etc.) narrow further
 - **Enter** navigates the session to the selected point, including `/tree`'s `Summarize branch?` prompt (Esc returns to the tree)
+- **`ctrl+p`** previews the selected entry full screen, starting at its first line instead of the bottom of the transcript. Inside the preview:
+  - `←/→` walk neighbouring entries
+  - `j/k`, `↑/↓` line, `space/b`/`PgDn`/`PgUp` page, `g`/`G` top/bottom
+  - `c` puts the entry in the editor as quoted context, ready for a follow-up question (nothing is sent until you press Enter)
+  - `q`, `Esc` or `ctrl+c` closes the preview and returns to the tree on the entry you were reading
+
+Returning to the tree after a preview rebuilds the picker, so a search query, filter or fold set beforehand is reset; the selection is kept.
 
 In non-interactive mode (`pi -p`), `/utree` prints the collapsed transcript to stdout instead.
 
